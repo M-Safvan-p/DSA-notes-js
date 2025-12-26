@@ -1,9 +1,6 @@
 # 🌳 **TREES**
 
 ---
-
-!https://media.geeksforgeeks.org/wp-content/uploads/20240415185343/tree-data-structure-banners-%282%29.webp?utm_source=chatgpt.com
-
 ### 🌱 **1. What is a Tree?**
 
 > A **Tree** is a *non-linear* data structure that stores data in a **hierarchy (parent → child)**.
