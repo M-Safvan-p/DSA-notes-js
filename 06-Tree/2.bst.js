@@ -58,25 +58,25 @@ class BinarySearchTree {
         if (this.isEmpty()) {
             this.root = newNode;
         } else {
-            this._insertNode(this.root, newNode);
+            this.#insertNode(this.root, newNode);
         }
     }
 
     /**
      * Helper method for insert
      */
-    _insertNode(node, newNode) {
+    #insertNode(node, newNode) {
         if (newNode.value < node.value) {
             if (!node.left) {
                 node.left = newNode;
             } else {
-                this._insertNode(node.left, newNode);
+                this.#insertNode(node.left, newNode);
             }
         } else {
             if (!node.right) {
                 node.right = newNode;
             } else {
-                this._insertNode(node.right, newNode);
+                this.#insertNode(node.right, newNode);
             }
         }
     }
@@ -191,8 +191,7 @@ class BinarySearchTree {
         if (Math.abs(leftHeight - rightHeight) > 1) return false;
 
         return (
-            this.isBalanced(node.left) &&
-            this.isBalanced(node.right)
+            this.isBalanced(node.left) && this.isBalanced(node.right)
         );
     }
 
@@ -201,16 +200,15 @@ class BinarySearchTree {
     ======================= */
 
     delete(value) {
-        this.root = this._deleteNode(this.root, value);
+        this.root = this.#deleteNode(this.root, value);
     }
-
-    _deleteNode(node, value) {
+    #deleteNode(node, value) {
         if (!node) return null;
 
         if (value < node.value) {
-            node.left = this._deleteNode(node.left, value);
+            node.left = this.#deleteNode(node.left, value);
         } else if (value > node.value) {
-            node.right = this._deleteNode(node.right, value);
+            node.right = this.#deleteNode(node.right, value);
         } else {
             // Case 1: No child
             if (!node.left && !node.right) return null;
@@ -222,7 +220,7 @@ class BinarySearchTree {
             // Case 3: Two children
             const minValue = this.findMin(node.right);
             node.value = minValue;
-            node.right = this._deleteNode(node.right, minValue);
+            node.right = this.#deleteNode(node.right, minValue);
         }
 
         return node;
