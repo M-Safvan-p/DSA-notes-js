@@ -147,8 +147,7 @@ For node at index `i`:
         }
     
         if (smallest !== index) {
-          [this.heap[index], this.heap[smallest]] =
-            [this.heap[smallest], this.heap[index]];
+          this.swap(smallest,index);
           this.heapifyDown(smallest);
         }
       }
