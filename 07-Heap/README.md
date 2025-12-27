@@ -1,5 +1,5 @@
 # 🌳 Heap
----
+
 
 > A **Heap** is a **special binary tree** used when we want:
 👉 **Fast access to the minimum or maximum element**
@@ -23,7 +23,6 @@ That’s a **heap** → priority-based.
 
 This is exactly what a **Heap** is for. It is a data structure designed to give you the "highest priority" (or lowest value) item instantly.
 
----
 
 ## 🧠 2. Properties of a Heap (Must Know)
 
@@ -39,7 +38,6 @@ This is exactly what a **Heap** is for. It is a data structure designed to give 
 - **Max Heap** → Parent ≥ children
 - **Min Heap** → Parent ≤ children
 
----
 
 ## 🔼 3. Types of Heaps
 
@@ -67,7 +65,6 @@ Smallest element is always on top.
 
 ✅ Root is **always important element**
 
----
 
 ## 🧠 4. Why Heap is Stored as an Array?
 
@@ -183,7 +180,6 @@ Although insertion is log n,
 
 (Asked frequently in interviews)
 
----
 
 ## 🎯 8. Applications of Heap (Very Important)
 
@@ -209,7 +205,6 @@ Although insertion is log n,
 - Dijkstra’s algorithm
 - Top K frequent elements
 
----
 
 ## 🔁 9. Min Heap vs Max Heap
 
