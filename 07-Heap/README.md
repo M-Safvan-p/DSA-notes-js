@@ -81,7 +81,6 @@ For node at index `i`:
 📌 This makes heap operations fast.
 
 ---
-
 - 🧑‍💻 5. Min Heap Implementation (JavaScript)
     
     ```jsx
@@ -106,6 +105,10 @@ For node at index `i`:
         this.heap.push(value);
         this.heapifyUp();
       }
+      
+      swap(a,b){
+          [this.heap[a],this.heap[b]] = [this.heap[b],this.heap[a]];
+      }
     
       heapifyUp() {
         let index = this.heap.length - 1;
@@ -113,8 +116,7 @@ For node at index `i`:
           index > 0 &&
           this.heap[this.getParent(index)] > this.heap[index]
         ) {
-          [this.heap[index], this.heap[this.getParent(index)]] =
-            [this.heap[this.getParent(index)], this.heap[index]];
+          this.swap(index,this.getParent(index))
           index = this.getParent(index);
         }
       }
@@ -151,8 +153,7 @@ For node at index `i`:
         }
       }
     }
-    ```
-    
+    ```   
 
 ## ⚙️ 6. Heap Operations & Complexity
 
