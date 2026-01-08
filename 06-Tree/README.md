@@ -357,28 +357,74 @@ Visit level by level using **queue**.
 
 ### 🌳 **9. Balanced Trees (Advanced)**
 
-🧠 Easy way to remember
+> A **balanced tree** is a tree where **left and right sides are almost equal in height**.
+> 
 
-- **AVL Tree** → “Perfect balance”
-- **Red-Black Tree** → “Good enough balance”
+Common Balanced Trees
 
-📌 When to use
+- **AVL Tree**
+    
+    > An AVL Tree is a self-balancing Binary Search Tree where the height difference between left and right subtrees of every node is at most 1.
+    > 
+    
+    (AVL = **Adelson-Velsky and Landis**)
+    
+    Time Complexity
+    
+    | Operation | Time |
+    | --- | --- |
+    | Search | O(log n) |
+    | Insert | O(log n) |
+    | Delete | O(log n) |
+    
+    AVL vs Normal BST
+    
+    | Feature | BST | AVL |
+    | --- | --- | --- |
+    | Balanced | ❌ | ✅ |
+    | Worst-case height | O(n) | O(log n) |
+    | Speed | Can be slow | Always fast |
+- **Red-Black Tree**
+    
+    > A Red–Black Tree is a self-balancing Binary Search Tree where each node is colored red or black to keep the tree balanced.
+    > 
+    
+    The coloring rules ensure the tree height stays small, so operations are fast.
+    
+    ---
+    
+    Red–Black Tree Rules (Very Important)
+    
+    1. Every node is **either red or black**
+    2. The **root is always black**
+    3. All **leaf (NULL) nodes are black**
+    4. **No two red nodes** can be adjacent (no red parent–child)
+    5. Every path from a node to its descendant NULL nodes has the **same number of black nodes** (black height)
+    
+    These rules keep the tree balanced.
+    
+    ---
+    
+    Example
+    
+    ```
+            10(B)
+           /     \
+       5(R)      15(R)
+       /  \        \
+    2(B) 7(B)     20(B)
+    ```
+    
+    (B = Black, R = Red)
+    
+    ---
+    
+- **B-Tree**
+- **B+ Tree**
 
-- Use **AVL Tree** when **search is very frequent**
-- Use **Red-Black Tree** when **insert/delete is frequent**
+📌 Key Point to Remember
 
-✅ One-line summary
-
-- **AVL = more balanced, slower updates**
-- **Red-Black = less balanced, faster updates**
-
-Self-balancing tree used in:
-
-✔ C++ map
-
-✔ Java TreeMap
-
-✔ Linux kernel
+- Balanced tree = **short height** = **fast search**
 
 ### 🔥 **Differences Between AVL and Red-Black Tree**
 
@@ -392,6 +438,11 @@ Self-balancing tree used in:
 | Best use | Search-heavy tasks | Insert/Delete-heavy tasks |
 | Memory | Requires storing heights | Requires storing color bit |
 
+✅ One-line summary
+
+- **AVL = more balanced, slower updates**
+- **Red-Black = less balanced, faster updates**
+
 ## 🔥**Differences between BT & BST**
 
 | Feature | Binary Tree (BT) | Binary Search Tree (BST) |
@@ -403,6 +454,9 @@ Self-balancing tree used in:
 | Order of Nodes | Can be random | Always ordered |
 
 ### 🌲 **10. Segment Tree (Advanced)**
+
+> A **Segment Tree** is a tree that stores information about **ranges (segments)** of an array so range queries and updates are fast.
+> 
 
 Used for:
 

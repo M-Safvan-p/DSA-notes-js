@@ -775,7 +775,8 @@ If you still hold a reference (even accidentally), it can’t clean it — causi
 ### ⚙️ Summary Table
 
 | Concept | Meaning | Example | Analogy |
-| --- | --- | --- | --- |
+| Fix formatting and typo in tree README
+ | --- | --- | --- |
 | **Static Allocation** | Fixed memory decided before program runs | `let arr = [1,2,3]` | Reserved theater seats |
 | **Dynamic Allocation** | Memory changes during runtime | `arr.push(5)` | Expanding bag |
 | **Memory Leak** | Unused memory not released | Unused variables or loops | Leaving garbage on your desk |
