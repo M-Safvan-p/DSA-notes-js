@@ -155,7 +155,6 @@ A **Fenwick Tree** is a **simpler and lighter version of Segment Tree**.
 
 ## 🌳 5**. Binary Tree (BT)**
 
----
 
 A **Binary Tree** is a tree where **each node can have at most 2 children**, called **left child** and **right child**.
 
