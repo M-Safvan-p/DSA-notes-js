@@ -3,14 +3,12 @@
  * HEAP PROBLEMS – JavaScript
  * ======================================================
  *
- * Problem 1:
- * Find the Kth largest element in an array.
- *
- * Approach:
- * - Maintain a Min Heap of size K
- * - Insert elements one by one
- * - If heap size exceeds K, remove the minimum element
- * - The root of the Min Heap will be the Kth largest element
+ * Contents:
+ * 1. Min Heap Implementation
+ * 2. Kth Largest Element in an Array
+ * 3. Concept Note: Kth Smallest Element
+ * 4. Delete a Given Value from Min Heap
+ * 5. Heap Sort (Descending Order – Objects)
  *
  * ======================================================
  */
@@ -79,17 +77,11 @@ class MinHeap {
         const left = this.getLeftChildIndex(index);
         const right = this.getRightChildIndex(index);
 
-        if (
-            left < this.heap.length &&
-            this.heap[left] < this.heap[smallest]
-        ) {
+        if (left < this.heap.length && this.heap[left] < this.heap[smallest]) {
             smallest = left;
         }
 
-        if (
-            right < this.heap.length &&
-            this.heap[right] < this.heap[smallest]
-        ) {
+        if (right < this.heap.length && this.heap[right] < this.heap[smallest]) {
             smallest = right;
         }
 
@@ -120,22 +112,15 @@ class MinHeap {
     deleteAt(index) {
         if (index < 0 || index >= this.heap.length) return;
 
-        // If deleting the last element
         if (index === this.heap.length - 1) {
             this.heap.pop();
             return;
         }
 
-        // Step 1: Replace with last element
         this.heap[index] = this.heap.pop();
-
-        // Step 2: Restore heap property
         const parentIndex = this.getParentIndex(index);
 
-        if (
-            index > 0 &&
-            this.heap[index] < this.heap[parentIndex]
-        ) {
+        if (index > 0 && this.heap[index] < this.heap[parentIndex]) {
             this.#heapifyUpFrom(index);
         } else {
             this.#heapifyDown(index);
@@ -158,97 +143,61 @@ class MinHeap {
 ====================================================== */
 
 /**
- * Find the Kth largest element using Min Heap
- * @param {number[]} arr
- * @param {number} k
- * @returns {number}
+ * Time Complexity: O(n log k)
+ * Space Complexity: O(k)
  */
 function findKthLargest(arr, k) {
     const minHeap = new MinHeap();
 
     for (let num of arr) {
         minHeap.insert(num);
-
-        // Keep heap size limited to K
         if (minHeap.size() > k) {
             minHeap.extractMin();
         }
     }
 
-    // Root of Min Heap is the Kth largest element
     return minHeap.heap[0];
 }
 
-/* ======================================================
+/* =======================
    Example Usage
-====================================================== */
+======================= */
 
-const arr = [3, 2, 1, 5, 6, 4];
-const k = 2;
-
-console.log(findKthLargest(arr, k)); // Output: 5
+const numbers = [3, 2, 1, 5, 6, 4];
+console.log(findKthLargest(numbers, 2)); // 5
 
 /* ======================================================
    IMPORTANT NOTE (CONCEPT ONLY)
 ====================================================== */
 
 /**
- * ➤ To find the Kth SMALLEST element:
- *    - Use a MAX HEAP of size K
- *    - Remove the largest element when size exceeds K
- *    - The root of the Max Heap gives the Kth smallest element
- *
- * Reason:
- * - Min Heap keeps the smallest element on top
- * - Max Heap keeps the largest element on top
+ * Kth Largest  → Min Heap (size K)
+ * Kth Smallest → Max Heap (size K)
  */
 
 /* ======================================================
-   PROBLEM 2: DELETE A GIVEN VALUE FROM MIN HEAP
+   PROBLEM 2: HEAP SORT (DESCENDING ORDER)
+   Sorting objects based on "marks"
 ====================================================== */
 
 /**
- * Task:
- * Delete a specific value from the Min Heap.
- *
- * Approach:
- * 1. Find the index of the value in the heap array.
- * 2. Replace it with the last element.
- * 3. Remove the last element.
- * 4. Restore heap property:
- *    - Heapify UP if value is smaller than parent
- *    - Heapify DOWN otherwise
- *
- * Time Complexity:
- * - Search: O(n)
- * - Heapify: O(log n)
- *
- * Space Complexity:
- * - O(1)
- *
- * Example:
- * const minHeap = new MinHeap();
- * minHeap.deleteValue(3);
+ * Time Complexity: O(n log n)
+ * Space Complexity: O(1)
  */
 
-
-// problem 2 heap sort descsendign ordere
-let students = [
-  { name: "Akhil", marks: 70 },
-  { name: "Rahul", marks: 85 },
-  { name: "Sneha", marks: 60 },
-  { name: "Anu", marks: 90 }
+const students = [
+    { name: "Akhil", marks: 70 },
+    { name: "Rahul", marks: 85 },
+    { name: "Sneha", marks: 60 },
+    { name: "Anu", marks: 90 }
 ];
 
 function heapSort(arr) {
-    let n = arr.length;
+    const n = arr.length;
 
-    // Step 1: Build Min Heap
     buildMinHeap(arr, n);
 
-    // Step 2: Extract elements
     for (let i = n - 1; i > 0; i--) {
-        // Move smallest to end
         [arr[0], arr[i]] = [arr[i], arr[0]];
         heapify(arr, i, 0);
     }
@@ -280,5 +229,9 @@ function heapify(arr, n, i) {
         heapify(arr, n, smallest);
     }
 }
+
+/* =======================
+   Example Usage
+======================= */
 
 console.log(heapSort(students));
