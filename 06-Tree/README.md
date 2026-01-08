@@ -152,6 +152,11 @@ A **Fenwick Tree** is a **simpler and lighter version of Segment Tree**.
 | Height | **O(n)** |
 | Count nodes | **O(n)** |
 
+
+## 🌳 5**. Binary Tree (BT)**
+
+---
+
 A **Binary Tree** is a tree where **each node can have at most 2 children**, called **left child** and **right child**.
 
 ✔ Properties
@@ -397,10 +402,6 @@ Self-balancing tree used in:
 | Searching | **Slow** (O(n)) | **Fast** (O(log n)) |
 | Usage | General tree structure, heaps | Searching, sorting, fast lookup |
 | Order of Nodes | Can be random | Always ordered |
-
-## 🌳 5**. Binary Tree (BT)**
-
----
 
 ### 🌲 **10. Segment Tree (Advanced)**
 
