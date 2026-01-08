@@ -6,7 +6,6 @@ A **Data Structure** is just a **way to organize and store data** so that we can
 
 - You can store numbers, strings, or objects in different **data structures** like **Arrays**, **Linked Lists**, **Stacks**, **Queues**, etc.
 
----
 
 ### 🧰 Why Do We Need Data Structures?
 
@@ -22,7 +21,7 @@ If you have 1000 student names and want to find one quickly —
 
 using an **Array** is much faster than checking each file one by one in a folder!
 
----
+
 
 ### ⚙️ Types of Data Structures (You’ll Learn Step-by-Step)
 
@@ -52,7 +51,7 @@ Each element has a **previous** and **next** neighbor (except the first and last
 3. **Stack** → Follows **LIFO** (Last In, First Out) — like a stack of plates 🍽️.
 4. **Queue** → Follows **FIFO** (First In, First Out) — like people in a line 🧍‍♂️🧍‍♀️.
 
----
+
 
 ## 🔸 2. Non-Linear Data Structures
 
@@ -88,7 +87,7 @@ console.log(tree.value);           // Parent
 console.log(tree.children[0].value); // Child 1
 ```
 
----
+
 
 ### ⚙️ Quick Comparison
 
@@ -99,7 +98,7 @@ console.log(tree.children[0].value); // Child 1
 | Traversing | One path | Multiple paths |
 | Memory use | Simple | Complex but flexible |
 
----
+
 
 ## 🔸 3. Hash-Based Data Structures
 
@@ -119,7 +118,7 @@ That’s how a **hash-based structure** works —
 
 it uses a **hash function** to quickly find where to store or fetch the data.
 
----
+
 
 ### 🧠 Key Terms (Simple Definitions)
 
@@ -128,7 +127,7 @@ it uses a **hash function** to quickly find where to store or fetch the data.
 - **Hash Function:** Converts a key into a specific location (called a hash code).
 - **Hash Table:** The table or structure where data is stored.
 
----
+
 
 ### 💻 Real-Life Example
 
@@ -139,7 +138,7 @@ Imagine your phone’s contact list 📱
 
 That’s a hash lookup — fast and efficient ⚡
 
----
+
 
 ### 💻 JavaScript Example:
 
@@ -169,7 +168,7 @@ marks.set("Rahul", 90);
 console.log(marks.get("Safwan")); // 95
 ```
 
----
+
 
 ### ⚙️ Why Use Hash-Based Structures?
 
@@ -189,7 +188,7 @@ Perfect for things like student name → score, username → password, etc.
 
 # 🧩 What Is an Algorithm?
 
----
+
 
 🌱 Simple Definition
 
@@ -197,7 +196,7 @@ An **Algorithm** is just a **step-by-step set of instructions** to solve a probl
 
 So, an **algorithm** in programming is the same — a clear sequence of steps to solve a problem.
 
----
+
 
 ### 💻 Programming Example
 
@@ -235,7 +234,7 @@ console.log("The biggest number is:", max);
 - ⚡ They make your program **faster**.
 - 💡 They build your **logical thinking** — like a roadmap for coding.
 
----
+
 
 ### 📚 Common Types of Algorithms (We’ll Learn Step by Step)
 
@@ -285,7 +284,7 @@ Because:
 
 So, we analyze the *mathematical behavior* of the algorithm.
 
----
+
 
 ### 🧠 Three Main Types of Asymptotic Notations
 
@@ -326,7 +325,7 @@ you have to check all numbers one by one.
 
 ➡️ **O(n)** → means in the worst case, you’ll make `n` comparisons.
 
----
+
 
 🔹 Case 3: Average Case (Θ Notation)
 
@@ -336,7 +335,7 @@ So, on average, you’ll check **n/2** elements.
 
 ➡️ **Θ(n)** → means on average, time grows linearly with input.
 
----
+
 
 ### 💻 Example Code: Linear Search
 
@@ -360,7 +359,7 @@ console.log(linearSearch(numbers, 30)); // Output: 2
 - Worst case → O(n) (if target is last or missing)
 - Average case → Θ(n)
 
----
+
 
 ### ⚙️ Summary Table
 
@@ -416,8 +415,6 @@ As the input grows, the time it takes changes — that’s **time complexity**.
 
 ## 🧩Common Time Complexities Explain
 
----
-
 ### ⚙️ 1️⃣ O(1) — Constant Time
 
 The algorithm takes the **same amount of time** no matter how large the input is.
@@ -431,7 +428,7 @@ console.log(arr[2]); // Accessing element directly
 
 ✅ You just accessed one item → **O(1)** time.       (Doesn’t depend on the size of the array.)
 
----
+
 
 ### ⚙️ 2️⃣ O(n) — Linear Time
 
@@ -450,7 +447,7 @@ for (let i = 0; i < arr.length; i++) {
 
 ✅ Loop runs for every element → **O(n)**.
 
----
+
 
 ### ⚙️ 3️⃣ O(log n) — Logarithmic Time
 
@@ -531,9 +528,6 @@ As `n` increases, calls explode! 🚀
 
 That’s **O(2ⁿ)** — very slow for large inputs.
 
----
-
----
 
 ### ⚙️ Common Time Complexities (From Fastest to Slowest)
 
@@ -547,7 +541,6 @@ That’s **O(2ⁿ)** — very slow for large inputs.
 | **O(2ⁿ)** | Exponential | Extremely slow | Recursion problems |
 | **O(n!)** | Factorial | Worst type | Generating all permutations |
 
----
 
 ## 💾 2. Space Complexity
 
@@ -670,7 +663,7 @@ If not cleaned properly → **Memory Leak** 😬
 
 There are two types:
 
----
+
 
 ### 🔹 **1. Static Memory Allocation**
 
@@ -713,7 +706,7 @@ The array grows and shrinks dynamically — JS allocates and frees memory automa
 
 Like a **rubber bag** — it expands or shrinks depending on how much you put inside.
 
----
+
 
 ## ⚡ 2. What Is a Memory Leak?
 
@@ -729,7 +722,7 @@ Over time, your program eats up all the memory — making it **slow, laggy, or e
 2. You forget to clear intervals or event listeners.
 3. You keep references to objects that are no longer needed.
 
----
+
 
 ### 💻 Example of Memory Leak
 
@@ -757,7 +750,7 @@ Always clear intervals and remove data you don’t need:
 clearInterval(myInterval);
 ```
 
----
+
 
 ## 🧩 How Memory Is Managed in JavaScript
 
@@ -777,7 +770,7 @@ But remember — the Garbage Collector only removes data that has **no reference
 
 If you still hold a reference (even accidentally), it can’t clean it — causing a leak.
 
----
+
 
 ### ⚙️ Summary Table
 
