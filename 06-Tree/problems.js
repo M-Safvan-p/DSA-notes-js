@@ -11,7 +11,7 @@
  * 3. Duplicate Handling in BST
  *    - Case 1: Remove duplicates from existing BST
  *    - Case 2: Prevent duplicates during insertion (Best)
- *
+ * 4. find the Degree of a node
  * ======================================================
  */
 
@@ -258,3 +258,16 @@ console.log("BST after removing duplicates:", bstWithDup);
 ❌ Removing duplicates from an existing BST:
    → Complex and only done if explicitly asked
 */
+
+/* ======================================================
+   PROBLEM 4: FIND THE DEGREE OF A NODE
+====================================================== */
+
+getDegree(node){
+    let degree = 0;
+
+    if(node.left)degree++;
+    if(node.right)degree++;
+
+    return degree;
+}

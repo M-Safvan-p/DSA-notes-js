@@ -16,7 +16,6 @@ A **Tree** is a hierarchical data structure made of **nodes** connected by **edg
 ✔ Company hierarchy (CEO → Managers → Employees)
 
 ---
-
 ## 🧱 **2. Basic Terms**
 
 | Term | Meaning |
@@ -30,6 +29,7 @@ A **Tree** is a hierarchical data structure made of **nodes** connected by **edg
 | **Height** | Longest path from root to leaf |
 | **Depth** | Distance from root |
 | Level | Level tells which row a node belongs to in the tree |
+| Degree | **degree of  a node** is the **number of children that node has**. |
 
 Example Tree:
 
