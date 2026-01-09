@@ -259,6 +259,19 @@ We’ll cover these next, step-by-step:
     
 
 ---
+## ✅ What is a Complete Graph?
+
+A **complete graph** is a graph where **every pair of distinct vertices is connected by an edge**.
+
+👉 No missing connections.
+
+---
+
+### 📌 Key Facts
+
+- Denoted as **Kₙ** (complete graph with `n` vertices)
+- **Each vertex connects to all others**
+- **No self-loops**, no multiple edges (simple graph)
 
 ## 🌟 10. Easy Summary
 
