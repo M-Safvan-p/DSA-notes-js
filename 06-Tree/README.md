@@ -297,7 +297,53 @@ Visit level by level using **queue**.
             return result;
         }
     ```
-    
+### 📘 BST – Time Complexity
+
+Key Concept
+
+> The time complexity of BST operations depends on the height (h) of the tree.
+> 
+- **Balanced BST** → `h = O(log n)`
+- **Skewed BST** → `h = O(n)`
+
+---
+
+⌛ Time Complexity Table
+
+| Operation | Best Case (Balanced) | Average Case | Worst Case (Skewed) |
+| --- | --- | --- | --- |
+| Search | O(log n) | O(log n) | O(n) |
+| Insert | O(log n) | O(log n) | O(n) |
+| Delete | O(log n) | O(log n) | O(n) |
+| Find Minimum | O(log n) | O(log n) | O(n) |
+| Find Maximum | O(log n) | O(log n) | O(n) |
+| Inorder Traversal | O(n) | O(n) | O(n) |
+| Preorder Traversal | O(n) | O(n) | O(n) |
+| Postorder Traversal | O(n) | O(n) | O(n) |
+| Height of Tree | O(n) | O(n) | O(n) |
+| Count Nodes | O(n) | O(n) | O(n) |
+
+Space Complexity (Extra Memory)
+
+| Operation | Space |
+| --- | --- |
+| Search / Insert / Delete (recursive) | O(h) |
+| Traversals | O(h) |
+
+- Balanced BST → O(log n)
+- Skewed BST → O(n)
+
+Summary 
+
+- BST operations depend on **tree height**
+- **Balanced BST → fast (O(log n))**
+- **Unbalanced BST → slow (O(n))**
+- Traversals always take **O(n)**
+
+One-Line Exam Answer
+
+> In a BST, search, insert, and delete take O(h) time, which becomes O(log n) for a balanced tree and O(n) for a skewed tree.
+> 
 
 ## ✅ Difference between DFS and BFS
 
