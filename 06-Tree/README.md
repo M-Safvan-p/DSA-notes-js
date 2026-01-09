@@ -177,7 +177,37 @@ Example (valid BT):
 ➡ This is valid because each node has ≤ 2 children.
 
 ❌ But values are random — no ordering rule.
+---
+## 🌳 **Full BT vs Complete BT**
 
+### **Full Binary Tree**
+
+👉 Every node has **0 or 2 children only**
+
+❌ No node with exactly 1 child
+
+### **Complete Binary Tree**
+
+👉 All levels filled **level-by-level**
+
+👉 Last level filled **left to right**
+
+✅ Nodes may have **0, 1, or 2 children**
+
+**Key Difference**
+
+- **Full** → child count rule (0 or 2)
+- **Complete** → filling order rule (level-wise, left-first)
+
+**Facts**
+
+✔ A tree can be full but not complete
+
+✔ Complete but not full
+
+✔ Both
+
+✔ Or neither
 ---
 
 ## 🌲 6**. Binary Search Tree (BST)**
