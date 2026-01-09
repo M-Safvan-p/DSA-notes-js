@@ -9,6 +9,7 @@
  * 3. Concept Note: Kth Smallest Element
  * 4. Delete a Given Value from Min Heap
  * 5. Heap Sort (Descending Order – Objects)
+ * 6. Draw a Min Heap from a Given Array
  *
  * ======================================================
  */
@@ -91,8 +92,6 @@ class MinHeap {
         }
     }
 
-    /* ---------- Utilities ---------- */
-
     size() {
         return this.heap.length;
     }
@@ -142,10 +141,6 @@ class MinHeap {
    PROBLEM 1: KTH LARGEST ELEMENT IN AN ARRAY
 ====================================================== */
 
-/**
- * Time Complexity: O(n log k)
- * Space Complexity: O(k)
- */
 function findKthLargest(arr, k) {
     const minHeap = new MinHeap();
 
@@ -170,20 +165,15 @@ console.log(findKthLargest(numbers, 2)); // 5
    IMPORTANT NOTE (CONCEPT ONLY)
 ====================================================== */
 
-/**
- * Kth Largest  → Min Heap (size K)
- * Kth Smallest → Max Heap (size K)
- */
+/*
+Kth Largest  → Min Heap (size K)
+Kth Smallest → Max Heap (size K)
+*/
 
 /* ======================================================
-   PROBLEM 2: HEAP SORT (DESCENDING ORDER)
+   PROBLEM 5: HEAP SORT (DESCENDING ORDER)
    Sorting objects based on "marks"
 ====================================================== */
-
-/**
- * Time Complexity: O(n log n)
- * Space Complexity: O(1)
- */
 
 const students = [
     { name: "Akhil", marks: 70 },
@@ -230,8 +220,33 @@ function heapify(arr, n, i) {
     }
 }
 
-/* =======================
-   Example Usage
-======================= */
-
 console.log(heapSort(students));
+
+/* ======================================================
+   PROBLEM 6: DRAW A MIN HEAP FROM A GIVEN ARRAY
+====================================================== */
+
+/*
+Given Array:
+[10, 20, 15, 30, 40]
+
+Step-by-step insertion into Min Heap:
+
+Insert 10 → [10]
+Insert 20 → [10, 20]
+Insert 15 → [10, 20, 15]
+Insert 30 → [10, 20, 15, 30]
+Insert 40 → [10, 20, 15, 30, 40]
+
+Final Min Heap (Array Representation):
+[10, 20, 15, 30, 40]
+
+Tree Representation:
+
+            10
+         20     15
+      30    40
+
+Property:
+- Parent value ≤ Child values
+*/
