@@ -269,6 +269,7 @@ There are **two types**:
 
 ---
 
+
 | **Linked List Type** | **Advantages** | **Disadvantages** |
 | --- | --- | --- |
 | **Singly Linked List** | • Easy to implement
